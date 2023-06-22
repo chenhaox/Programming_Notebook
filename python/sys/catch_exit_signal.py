@@ -4,8 +4,11 @@ Author: Hao Chen (chen960216@gmail.com)
 Created: 20230622osaka
 
 Note:
-SIGINT (signal interrupt) is sent when the user types the interrupt character (usually Ctrl-C) in the terminal. It is intended to gracefully terminate a process.
-SIGTERM (signal terminate) is sent to request that a process terminate. It is intended to allow a process to perform cleanup operations before exiting.
+- SIGINT (signal interrupt) is sent when the user types the interrupt character (usually Ctrl-C) in the terminal. It is intended to gracefully terminate a process.
+- SIGTERM (signal terminate) is sent to request that a process terminate. It is intended to allow a process to perform cleanup operations before exiting.
+ (** The followings are not available on Windows **)
+- SIGHUP (signal hangup) is sent when the controlling terminal of a process is closed. It is intended to allow a process to reinitialize itself.
+- SIGKILL (signal kill) is sent to forcibly terminate a process. It cannot be caught or ignored by the process.
 
 Reference:
 [Implementation of Signals under Linux and Windows?](https://stackoverflow.com/questions/12671741/implementation-of-signals-under-linux-and-windows)
